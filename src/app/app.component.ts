@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Subject} from 'rxjs';
 import {Logger} from './base/logger-service';
+import {ClipboardService} from 'ngx-clipboard';
+import {ToastrService} from 'ngx-toastr';
 
 const log = new Logger(`auth`);
 
@@ -15,10 +17,20 @@ export class AppComponent implements OnInit {
     arabNumbers: number[] = [1000, 990, 900, 500, 490, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
     result: any = '';
 
+    constructor(private clipboardService: ClipboardService,
+                private toastr: ToastrService) {
+
+    }
+
     ngOnInit(): void {
         this.textChange$.subscribe(resp => {
             this.toRoman(resp);
         });
+    }
+
+    copy() {
+        this.clipboardService.copy(this.result);
+        this.toastr.success(`${this.result} - copied!`, 'Copy');
     }
 
     public toRoman(num: any) {

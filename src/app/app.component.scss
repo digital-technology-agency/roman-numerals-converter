@@ -1,5 +1,6 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 @import url('https://fonts.googleapis.com/css2?family=Jura&display=swap');
+@import "~font-awesome/css/font-awesome.min.css";
 
 html {
   font-size: 1em;
@@ -16,6 +17,12 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.input-group-text {
+  :hover{
+    cursor: pointer;
+  }
 }
 
 /* Firefox */

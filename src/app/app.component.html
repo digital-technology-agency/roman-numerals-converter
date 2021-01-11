@@ -7,8 +7,15 @@
                     <input class="col-md-2" type="number" (keyup)="textChange$.next($event.target.value)">
                 </div>
                 <div class="card-footer">
-                    <label *ngIf="result == ''">...</label>
-                    <label *ngIf="result != ''">{{result}}</label>
+                    <div class="flex-row">
+                        <label class="col-md-10" *ngIf="result == ''">...</label>
+                        <label class="col-md-10" *ngIf="result != ''">{{result}}</label>
+                        <div *ngIf="result != ''" class="offset-11" (click)="copy()">
+                            <span class="input-group-text">
+                              <i class="fa fa-copy"></i>
+                            </span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

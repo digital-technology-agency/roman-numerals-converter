@@ -12,6 +12,7 @@
   },
   "private": true,
   "dependencies": {
+    "@nebular/eva-icons": "^6.2.1",
     "@angular/animations": "~8.2.14",
     "@angular/common": "~8.2.14",
     "@angular/compiler": "~8.2.14",
@@ -23,6 +24,9 @@
     "angular-cli-ghpages": "^1.0.0-rc.1",
     "bootstrap": "^4.5.3",
     "animate.css": "^4.1.1",
+    "ngx-clipboard": "^14.0.1",
+    "font-awesome": "^4.7.0",
+    "ngx-toastr": "^13.2.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
