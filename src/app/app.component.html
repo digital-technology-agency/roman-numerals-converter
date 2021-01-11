@@ -1,14 +1,28 @@
-<div class="row">
-    <div class="offset-1 col-md-5">
-        <div class="card">
-            <div class="card-header">Input number</div>
-            <div class="card-body">
-                <input class="col-md-2" type="number" (keyup)="textChange$.next($event.target.value)">
-            </div>
-            <div class="card-footer">
-                <label *ngIf="result == ''">...</label>
-                <label *ngIf="result != ''">{{result}}</label>
+<div class="flex-row">
+    <div class="flex-row">
+        <div class="offset-1 col-md-4">
+            <div class="card">
+                <div class="card-header">Input number</div>
+                <div class="card-body">
+                    <input class="col-md-2" type="number" (keyup)="textChange$.next($event.target.value)">
+                </div>
+                <div class="card-footer">
+                    <label *ngIf="result == ''">...</label>
+                    <label *ngIf="result != ''">{{result}}</label>
+                </div>
             </div>
         </div>
+    </div>
+
+    <div class="flex-row">
+        <h1 class="title">
+            <a href="https://dta.agency">Агентство цифровых технологий</a>
+        </h1>
+    </div>
+
+    <div class="flex-row">
+        <h1 class="sub-title">
+            <a href="https://dta.agency">Разработка программного обеспечения</a>
+        </h1>
     </div>
 </div>
