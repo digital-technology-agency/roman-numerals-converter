@@ -10,7 +10,7 @@ const log = new Logger(`auth`);
     styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-    private textChange$: Subject<any> = new Subject<any>();
+    textChange$: Subject<any> = new Subject<any>();
     romanNumbers: string[] = ['M', 'XM', 'CM', 'D', 'XD', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I'];
     arabNumbers: number[] = [1000, 990, 900, 500, 490, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
     result: any = '';
